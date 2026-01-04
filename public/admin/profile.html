@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Edit Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.php">← Back to Admin Dashboard</a>
+  </nav>
+  <div class="min-h-screen bg-white text-black">
+    <main class="max-w-3xl mx-auto px-6 py-12">
+      <a href="index.php" class="inline-block text-sm text-gray-600 mb-6">← Back to Admin Dashboard</a>
+
+      <section class="bg-white border border-gray-200 rounded-lg shadow-sm p-6">
+        <h2 class="text-2xl font-bold mb-4">Edit Profile</h2>
+
+        <form id="profileForm" class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Full Name</label>
+            <input class="mt-1 block w-full border border-gray-200 rounded px-3 py-2" type="text" id="full_name" required>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Title / Position</label>
+            <input class="mt-1 block w-full border border-gray-200 rounded px-3 py-2" type="text" id="title" required>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Email</label>
+              <input class="mt-1 block w-full border border-gray-200 rounded px-3 py-2" type="email" id="email" required>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Phone</label>
+              <input class="mt-1 block w-full border border-gray-200 rounded px-3 py-2" type="text" id="phone">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Bio</label>
+            <textarea class="mt-1 block w-full border border-gray-200 rounded px-3 py-2" id="bio" rows="4"></textarea>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Profile Image URL</label>
+            <input class="mt-1 block w-full border border-gray-200 rounded px-3 py-2" type="text" id="profile_image" placeholder="e.g. assets/img/me.jpg">
+          </div>
+
+          <div class="flex gap-3 mt-4">
+            <button type="submit" class="px-4 py-2 bg-black text-white rounded">💾 Save Changes</button>
+            <button type="button" id="btnReset" class="px-4 py-2 border border-gray-200 rounded">↺ Reset</button>
+          </div>
+        </form>
+
+        <div id="msgBox" class="mt-4 text-sm text-gray-600"></div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="js/profile_admin.js"></script>
+</body>
+</html>
